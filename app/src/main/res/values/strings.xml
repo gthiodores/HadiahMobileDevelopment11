@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HadiahMobileDevelopment11</string>
+    <string name="happy_birthday">Happy Birthday Raymond!</string>
+    <string name="sender">From Gilbert</string>
+    <string name="button_msg_text">Tampilkan Pesan</string>
+    <string name="contentDesc">none</string>
+</resources>
