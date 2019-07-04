@@ -7,6 +7,7 @@
     tools:context=".PesanActivity">
 
     <ImageView
+        android:id="@+id/image_bg_pesan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/pesan_bg"

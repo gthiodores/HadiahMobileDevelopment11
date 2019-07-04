@@ -3,14 +3,28 @@ package com.example.android.hadiahmobiledevelopment11;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 public class PesanActivity extends AppCompatActivity {
-    MediaPlayer bgMusic;
+    private MediaPlayer bgMusic;
+    private ImageView mImageBg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesan);
+
+        mImageBg = findViewById(R.id.image_bg_pesan);
+        mImageBg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bgMusic.isPlaying())
+                    bgMusic.pause();
+                else
+                    bgMusic.start();
+            }
+        });
     }
 
     @Override

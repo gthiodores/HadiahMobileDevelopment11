@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer bgMusic;
     private Button mButtonMsg;
+    private ImageView mImageBg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PesanActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        mImageBg = findViewById(R.id.image_bg_main);
+        mImageBg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bgMusic.isPlaying())
+                    bgMusic.pause();
+                else
+                    bgMusic.start();
             }
         });
     }
